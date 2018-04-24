@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>popup页</title>
+	<meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link href="css/bootstrap-switch.min.css" rel="stylesheet">
+	<style>
+	body {
+		font-family: 'Microsoft Yahei';
+		width: 300px;
+	}
+
+	</style>
+</head>
+<body>
+<div style="padding: 20px 20px">
+	 <h3>微博阅读量助手 <a href="https://weibo.com/musiccover" target="_blank"><img src="img/weibo-logo.png" id="weibo"></a></h3>
+	<div id = "groups">
+        <p>使用说明：</p>
+        <p>1.打开微博私信界面，右键点击"管理群组"，完成群信息初始化</p>
+        <p>2.点击要提升阅读量微博的时间，进入微博详情界面。</p>
+        <p>3.右键点击"增加阅读"，该条微博即可自动分享至选中的群组</p>
+        <p>4.在微博非私信界面右键点击"管理群组"，即可添加或取消群组</p>
+        <p><b style="color: red">温馨提示：</b></p>
+        <p><b style="color: red">由于封号风险未知，请勿高频率使用此功能进行私信发送</b></p>
+        <p><b style="color: red">本软件仅供交流学习，由此软件带来的经济损失由使用者自行承担</b></p>
+     </div>
+     <form class="bs-example bs-example-form" role="form">
+        	<button class="btn btn-primary" id="open_wb">打开微博</button>
+    </form>
+</div>
+	<div>
+    <script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+	<script type="text/javascript" src="js/bootstrap-switch.min.js"></script>
+	<script type="text/javascript" src="js/popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+{
+	"manifest_version": 2,
+	"name": "微博阅读量助手",
+	"version": "1.0.0",
+	"description": "快速提升微博阅读量的小工具",
+	"update_url": "http://upext.chrome.360.cn/intf.php?method=ExtUpdate.query",
+	"icons":
+	{
+		"16": "img/icon16.png",
+		"48": "img/icon48.png",
+		"128": "img/icon128.png"
+	},
+	"browser_action": 
+	{
+		"default_icon": "img/icon.png",
+		"default_title": "微博阅读量助手",
+		"default_popup": "popup.html"
+	},
+	/*"page_action":
+	{
+		"default_icon": "img/icon.png",
+		"default_title": "我是pageAction",
+		"default_popup": "popup.html"
+	},*/
+	"background":
+	{
+		"scripts": ["js/jquery-1.8.3.js","js/background.js"]
+	},
+	"content_scripts": 
+	[
+		{
+			//"matches": ["<all_urls>"],
+			"matches": ["https://weibo.com/*"],
+			"js": ["js/jquery-1.8.3.js","js/content_scripts.js","js/layer.js"],
+			"css": ["css/content.css"],
+			"run_at": "document_end"
+		}
+	],
+	"permissions":
+	[
+		"contextMenus", 
+		"tabs", 
+		"storage",
+		"notifications"
+	],
+	//"web_accessible_resources": ["js/jquery-1.8.3.js","js/layer.js"],
+	"homepage_url": "https://vayci.github.io/weibo_reading/",
+	"omnibox": { "keyword" : "go" },
+	"default_locale": "zh_CN"
+}
